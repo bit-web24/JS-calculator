@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Calculator</title>
+        <style media="screen" rel="stylesheet">
+            body {
+                font-family: Bahnschrift Light;
+                font-weight: bold;
+            }
+
+            ::-webkit-scrollbar {
+                display: none;
+            }
+
+            table {
+                border-spacing: 20px;
+                text-align: center;
+                font-size: 25px;
+            }
+
+            td {
+                padding: 15px;
+                width: 43px;
+                cursor: default;
+                border: 2px solid deepskyblue;
+                border-radius: 4px;
+                color: deepskyblue;
+            }
+
+            #operator:hover {
+                background-color: deepskyblue;
+                color: black;
+            }
+
+            .show {
+                border: 2px solid white;
+                padding: 10px;
+                height: 45px;
+                width: 355px;
+                font-size: 40px;
+                margin-left: 15px;
+                color: black;
+                cursor: default;
+                overflow-x: scroll;
+                background-color: white ;
+                border-radius: 4px;
+            }
+
+            #calculater {
+                width: 410px;
+                padding-top: 20px;
+                background-color: rgb(55,55,55);
+                border-radius: 4px;
+            }
+
+            #number {
+                color: black;
+                border: 2px solid black;
+            }
+
+            #number:hover {
+                background-color: black;
+                color: white;
+            }
+
+            .equalto {
+                border: 2px solid green;
+                color: green;
+            }
+
+            .equalto:hover {
+                background-color: green;
+                color: white;
+            }
+
+            #cancleall {
+                border: 2px solid red;
+                color: red;
+            }
+
+            #cancleall:hover {
+                background-color: red;
+                color: white;
+            }
+
+            #bracket {
+                border: 2px solid yellow;
+                color: yellow;
+            }
+
+            #bracket:hover {
+                background-color: yellow;
+                color: black;
+            }
+
+            #power {
+                border: 2px solid orange;
+                color: orange;
+            }
+
+            #power:hover {
+                background-color: orange;
+                color: black;
+            }
+        </style>
+        <script> </script>
+    </head>
+    <body>
+        <div id="calculater">
+            <div class="show"></div>
+            <br/>
+            <table>
+                <tr>
+                    <td class="equalto" onClick="evalize()">=</td>
+                    <td id="cancleall" onClick="cancleall()">c</td>
+                    <td id="bracket" onClick="calculate(this)">(</td>
+                    <td id="bracket" onClick="calculate(this)">)</td>
+                </tr>
+                <tr>
+                    <td id="number" onClick="calculate(this)">7</td>
+                    <td id="number" onClick="calculate(this)">8</td>
+                    <td id="number" onClick="calculate(this)">9</td>
+                    <td id="operator" onClick="calculate(this)">/</td>
+                </tr>
+                <tr>
+                    <td id="number" onClick="calculate(this)">4</td>
+                    <td id="number" onClick="calculate(this)">5</td>
+                    <td id="number" onClick="calculate(this)">6</td>
+                    <td id="operator" onClick="multiply()">x</td>
+                </tr>
+                <tr>
+                    <td id="number" onClick="calculate(this)">1</td>
+                    <td id="number" onClick="calculate(this)">2</td>
+                    <td id="number" onClick="calculate(this)">3</td>
+                    <td id="operator" onClick="calculate(this)">+</td>
+                </tr>
+                <tr>
+                    <td id="power" onClick="power()">
+                        x<sup>y</sup>
+                    </td>
+                    <td id="number" onClick="calculate(this)">0</td>
+                    <td id="operator" onClick="calculate(this)">.</td>
+                    <td id="operator" onClick="calculate(this)">-</td>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
